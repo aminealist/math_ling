@@ -7,7 +7,7 @@ for i in range(int(kk)):
     n.append(i+1)
 k = ''
 
-for i in range(len(n) * 10000):
+for i in range(len(n) * 10000000):
     shuffle(n)
     b=''
     for i in range(len(n)):
