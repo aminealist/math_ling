@@ -44,3 +44,4 @@ class Manager(Sys_admin):
 
     def create_difficulties(self, Sys, Serv, f):
         Sys.feeling -= f
+        Sys.do_something(Serv)
