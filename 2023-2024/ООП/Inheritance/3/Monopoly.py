@@ -1,24 +1,24 @@
 class Servant:
 
     def __init__(self, h_f_w, w_l, salary, bonus=0):
-        self.h_for_work = h_f_w
+        self.hours_for_work = h_f_w
         self.work_list = w_l
         self.salary = salary
         self.bonus = bonus
 
     def stop_working(self):
-        self.h_for_work = 0
+        self.hours_for_work = 0
 
     def do_work(self):
         h = -1
         for work in self.work_list:
-            if self.h_for_work - self.work_list[work] > 0:
-                self.h_for_work -= self.work_list[work]
+            if self.hours_for_work - self.work_list[work] > 0:
+                self.hours_for_work -= self.work_list[work]
                 h *= -1
                 break
         if h == -1:
             print("Stop")
-            self.h_for_work = 0
+            self.hours_for_work = 0
 
 
 class Sys_admin(Servant):

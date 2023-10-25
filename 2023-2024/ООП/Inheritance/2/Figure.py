@@ -11,16 +11,16 @@ class Ellipse(Figure):
         super().__init__(color)
         self.h_radius, self.v_radius = min(r1, r2), max(r1, r2)
 
-    def parameters(self):
+    def show_parameters(self):
         print("ellipse", self.color)
 
 
 class Square(Figure):
-    def __init__(self, a, color="white"):
+    def __init__(self, a, color="White"):
         super().__init__(color)
         self.square_side = a
 
-    def parameters(self):
+    def show_parameters(self):
         print("square", self.color)
 
 
