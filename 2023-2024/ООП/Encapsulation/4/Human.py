@@ -2,8 +2,9 @@ from math import inf as infinite
 
 
 class Human:
-    def __init__(self, name, social_rating, gender, height, weight, waist, hair_length, beauty, iq, race, pets,
-                 friends, profession):
+    def __init__(self, name: str, social_rating: float, gender: str, height: float, weight: float, waist: float,
+                 hair_length: float, beauty: int, iq: int, race: str, pets: list,
+                 friends: list, profession: str):
         self.human_name = name
         self.social_rating = social_rating
         self.gender = gender
@@ -28,7 +29,7 @@ class Human:
     def __say_waist_length(self):
         print(self.__waist_length)
 
-    def is_friend(self, consideration_object):
+    def is_friend(self, consideration_object) -> bool:
         if isinstance(consideration_object, Human):
             if consideration_object.human_name in self.friends or self.human_name == consideration_object.human_name:
                 return True
@@ -38,7 +39,7 @@ class Human:
         else:
             return False
 
-    def is_professions_which_can_do_more(self, consideration_object):
+    def is_professions_which_can_do_more(self, consideration_object) -> bool:
         if isinstance(consideration_object, Human):
             if consideration_object.profession in self.Professions_which_can_do_more:
                 return True
