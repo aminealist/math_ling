@@ -30,6 +30,9 @@ class Ellipse:
 
     def is_circle(self):
         return True if self.v_radius == self.h_radius else False
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
