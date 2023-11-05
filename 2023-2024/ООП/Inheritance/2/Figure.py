@@ -22,6 +22,3 @@ class Square(Figure):
 
     def show_parameters(self):
         print("square", self.color)
-
-
-

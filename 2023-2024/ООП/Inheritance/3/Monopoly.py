@@ -27,7 +27,7 @@ class Sys_admin(Servant):
         self.bonus = bonus
         self.feeling = feeling
 
-    def do_something(self, Serv):
+    def do_something(self, Servant_n):
         if self.feeling > 50:
             print("GJ")
             Serv.h_for_work -= 1
@@ -42,6 +42,6 @@ class Manager(Sys_admin):
         self.salary = salary * 1.6
         self.feeling = feeling
 
-    def create_difficulties(self, Sys, Serv, f):
+    def create_difficulties(self, Sys, Servant_n, f):
         Sys.feeling -= f
         Sys.do_something(Serv)
