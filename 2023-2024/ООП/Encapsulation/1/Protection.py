@@ -9,8 +9,7 @@ class OBC:
         self.__num_of_musicians = n_o_m
 
     def kick_mate(self):
-        if round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(
-                opinion(0, 1)) + round(opinion(0, 1)) > 4:
+        if round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) > 4:
             if round(opinion(0, 1)) == 1:
                 self.__num_of_musicians -= 1
             else:
