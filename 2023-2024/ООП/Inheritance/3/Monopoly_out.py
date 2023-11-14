@@ -9,5 +9,6 @@ m1 = Manager({"Do_nothing": 1}, feeling=40)
 sys1.do_something(CPP_enjoyer)
 print(CPP_enjoyer.h_for_work, CPP_enjoyer.bonus, "\n")
 
+
 m1.create_difficulties(sys1, CPP_enjoyer, 200)
 print(CPP_enjoyer.h_for_work, CPP_enjoyer.bonus)

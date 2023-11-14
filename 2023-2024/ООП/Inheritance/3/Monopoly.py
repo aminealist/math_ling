@@ -1,8 +1,8 @@
 class Servant:
 
-    def __init__(self, h_f_w, w_l, salary, bonus=0):
-        self.hours_for_work = h_f_w
-        self.work_list = w_l
+    def __init__(self, hours_for_work, work_list, salary, bonus=0):
+        self.hours_for_work = hours_for_work
+        self.work_list = work_list
         self.salary = salary
         self.bonus = bonus
 
@@ -22,26 +22,26 @@ class Servant:
 
 
 class Sys_admin(Servant):
-    def __init__(self, h_f_w, w_l, salary=1, bonus=0, feeling=0):
-        super().__init__(h_f_w, w_l, salary * 1.3)
+    def __init__(self, hours_for_work, work_list, salary=1, bonus=0, feeling=0):
+        super().__init__(hours_for_work, work_list, salary * 1.3)
         self.bonus = bonus
         self.feeling = feeling
 
-    def do_something(self, Serv):
+    def do_something(self, Servant_n):
         if self.feeling > 50:
             print("GJ")
-            Serv.h_for_work -= 1
+            Servant_n.hours_for_work -= 1
         elif self.feeling < -50:
             print("Work better")
-            Serv.bonus -= 1
+            Servant_n.bonus -= 1
 
 
 class Manager(Sys_admin):
-    def __init__(self, w_l, h_f_w=2, salary=1, feeling=1):
-        super().__init__(h_f_w=h_f_w // 2, w_l=w_l, salary=salary)
+    def __init__(self, work_list, hours_for_work=2, salary=1, feeling=1):
+        super().__init__(hours_for_work=hours_for_work // 2, work_list=work_list, salary=salary)
         self.salary = salary * 1.6
         self.feeling = feeling
 
-    def create_difficulties(self, Sys, Serv, f):
+    def create_difficulties(self, Sys, Servant_n, f):
         Sys.feeling -= f
-        Sys.do_something(Serv)
+        Sys.do_something(Servant_n)
