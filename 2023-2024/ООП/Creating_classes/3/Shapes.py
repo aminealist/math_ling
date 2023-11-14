@@ -3,8 +3,8 @@ from math import sqrt
 
 
 class N_gon:
-    def __init__(self, n_of_sides, sides, angles):
-        self.n_of_sides = n_of_sides
+    def __init__(self, number_of_sides, sides, angles):
+        self.number_of_sides = number_of_sides
         self.sides = sorted(sides)
         self.angles = sorted(angles)
 
