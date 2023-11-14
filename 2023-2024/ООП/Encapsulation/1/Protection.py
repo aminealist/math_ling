@@ -3,10 +3,10 @@ from random import uniform as opinion
 
 
 class OBC:
-    def __init__(self, m_f_o_c, n_o_s, n_o_m):
-        self._money_per_perf = m_f_o_c
-        self.__num_of_soloists = n_o_s
-        self.__num_of_musicians = n_o_m
+    def __init__(self, money_per_perf: int, num_of_soloists: int, num_of_musicians: int):
+        self._money_per_perf = money_per_perf
+        self.__num_of_soloists = num_of_soloists
+        self.__num_of_musicians = num_of_musicians
 
     def kick_mate(self):
         if round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) + round(opinion(0, 1)) > 4:

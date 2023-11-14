@@ -1,9 +1,8 @@
 class BankAccount:
-    def __init__(self, n, n_s, b, p):
-        self.name = n
-        self.bank_account_number = n_s
-        self.__balance = b
-        self.__password = p
+    def __init__(self, name, balance, password):
+        self.name = name
+        self.__balance = balance
+        self.__password = password
 
     def show_balance(self, number_of_attempts=3):
 
